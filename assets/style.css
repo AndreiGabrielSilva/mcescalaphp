@@ -1,0 +1,124 @@
+/* McEscala - Estilos globais */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --mc-yellow: #FFC72C;
+    --mc-yellow-dark: #D4A017;
+    --mc-red: #DA291C;
+    --mc-red-dark: #B01E14;
+    --mc-dark: #27251F;
+    --mc-white: #FFFFFF;
+    --mc-gray: #F5F5F5;
+    --mc-muted: #6B6B6B;
+    --mc-border: #E0E0E0;
+    --radius: 12px;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f0ede8;
+    min-height: 100vh;
+    color: var(--mc-dark);
+    font-size: 16px;
+}
+
+/* ===== INPUTS GLOBAIS ===== */
+input, select, textarea {
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.input-group { margin-bottom: 14px; }
+.input-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--mc-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 6px;
+}
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid var(--mc-border);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--mc-dark);
+    background: var(--mc-white);
+    outline: none;
+    transition: border-color 0.2s;
+}
+.input-group input:focus, .input-group select:focus {
+    border-color: var(--mc-yellow);
+}
+
+/* Crachá estilizado */
+input.cracha-input {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: center;
+    color: var(--mc-red);
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s, transform 0.1s;
+    font-family: inherit;
+    width: 100%;
+}
+.btn:active { transform: scale(0.98); }
+.btn-yellow { background: var(--mc-yellow); color: var(--mc-dark); }
+.btn-yellow:hover { background: var(--mc-yellow-dark); }
+.btn-red { background: var(--mc-red); color: white; }
+.btn-red:hover { background: var(--mc-red-dark); }
+.btn-dark { background: var(--mc-dark); color: white; }
+.btn-dark:hover { background: #3a3830; }
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 13px;
+    width: auto;
+    border-radius: 8px;
+}
+
+/* Alertas */
+.alert {
+    padding: 11px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+.alert-error { background: #fff0f0; border: 1px solid #ffd0d0; color: #b01e14; }
+.alert-success { background: #f0fff4; border: 1px solid #c0f0c0; color: #1a7f37; }
+
+/* Tags de cargo */
+.cargo-tag {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+.cargo-atend { background: #e3f0ff; color: #1a5fb4; }
+.cargo-sup   { background: #e8f9e8; color: #1a7f37; }
+.cargo-ger   { background: #fff0cc; color: #9a6700; }
+.cargo-adm   { background: #ede8ff; color: #5c34b0; }
+.cargo-man   { background: #ffe8d6; color: #b04a00; }
+
+/* Responsivo base */
+@media (max-width: 480px) {
+    .btn { font-size: 14px; padding: 12px 20px; }
+}
